@@ -1,0 +1,74 @@
+"use client"
+
+import {
+    Sheet,
+    SheetContent,
+    SheetTrigger
+} from "@/components/ui/sheet"
+import { usePathname} from "next/navigation"
+import Link from "next/link"
+import { CiMenuFries } from "react-icons/ci"
+
+const links = [
+    {
+        name: "home",
+        href: "/"
+    },
+    {
+        name: "services",
+        href: "/services"
+    },
+    {
+        name: "resume",
+        href: "/resume"
+    },
+    {
+        name: "work",
+        href: "/work"
+    },
+    {
+        name: "contact",
+        href: "/contact"
+    }
+]
+
+const MobileNav = () => {
+
+    const pathname = usePathname()
+
+    return (
+        <Sheet>
+            <SheetTrigger className={"flex justify-center items-center"}>
+                <CiMenuFries className={"text-[32px] text-accent"} />
+            </SheetTrigger>
+            <SheetContent className={"flex flex-col"}>
+
+                {/* Logo */}
+                <div className={"mt-24 mb-14 text-center text-2xl"}>
+                    <Link href={"/"}>
+                        <h1 className={"text-4xl font-semibold"}>
+                            Dev<span className={"text-accent"}>.Eu</span>des
+                        </h1>
+                    </Link>
+                </div>
+
+                {/* nav */}
+                <nav className={"flex flex-col justify-center items-center text-2xl gap-8"}>
+                    {links.map((link, index) => {
+                        return (
+                            <Link
+                                href={link.href}
+                                key={index}
+                                className={""}
+                            >
+                                {link.name}
+                            </Link>
+                        )
+                    })}
+                </nav>
+            </SheetContent>
+        </Sheet>
+    )
+}
+
+export default MobileNav
