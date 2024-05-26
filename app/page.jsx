@@ -15,12 +15,12 @@ const Home = () => {
 
                 {/* text */}
                 <div className={"text-center xl:text-left order-2 xl:order-none"}>
-                    <span className={"text-xl"}>Software Developer</span>
+                    <span className={"text-xl"}>{"Software Developer"}</span>
                     <h1 className={"h1 mb-6"}>
-                        Hi I'm <br/> <span className={"text-accent"}>Eudes Djeya</span>
+                        {"Hi I'm"} <br/> <span className={"text-accent"}>{"Eudes Djeya"}</span>
                     </h1>
                     <p className={"max-w-[500px] mb-9 text-white/80"}>
-                        I am a passionate fullstack JavaScript developer, expert in the latest technologies in the field, ready to tackle the most exhilarating challenges of web development.
+                        {"I am a passionate fullstack JavaScript developer, expert in the latest technologies in the field, ready to tackle the most exhilarating challenges of web development."}
                     </p>
 
                     {/* btn and socials */}
@@ -30,7 +30,7 @@ const Home = () => {
                             size={"lg"}
                             className={"uppercase flex items-center gap-2"}
                         >
-                            <span>Download CV</span>
+                            <span>{"Download CV"}</span>
                             <FiDownload className={"text-xl"}/>
                         </Button>
                         <div className={"mb-8 xl:mb-0"}>
